@@ -34,11 +34,11 @@ MongoClient.connect(url).then((client) => {
                             
             return db.dropCollection("dishes");
         })
-        .then((result) => {
+        .then( (result) => {
             console.log("Dropped Collection: ", result);
 
             return client.close();
-        })
+        } )
         .catch((err) => console.log(err));
 
 })
